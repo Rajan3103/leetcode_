@@ -65,25 +65,26 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-07-28T08:37:26.677Z  
+**Runtime:** 2 ms (beats 98.17%)  
+**Memory:** 43.5 MB (beats 26.07%)  
+**Submitted:** 2026-07-28T08:37:40.890Z  
 
 ```java
 class Solution {
-    public int removeDuplicates(int[] nums) {
-        int n=nums.length;
-        if(n==0){
-            return 0;
-        }
-        int k=0 ;
-        for(int j=0;j<nums.length;j++){
-            if(nums[j] != nums[k]){
-                k++;
-                nums[k] = nums[j];
+    public boolean isValid(String s) {
+        Stack<Character> stack=new Stack<>();
+        for(char c:s.toCharArray()){
+            if(c=='('){
+                stack.push(')');
+            }else if(c=='{'){
+                stack.push('}');
+            }else if(c=='['){
+                stack.push(']');
+            }else if(stack.isEmpty()|| stack.pop()!=c){
+                return false;
             }
         }
-        return k+1;
+        return stack.isEmpty();
     }
 }
 ```
