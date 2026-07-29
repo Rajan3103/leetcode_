@@ -31,8 +31,8 @@ Follow up: Could you minimize the total number of operations done?
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 92.13%)  
-**Memory:** 47.6 MB (beats 76.24%)  
-**Submitted:** 2026-07-29T13:37:01.657Z  
+**Memory:** 47.5 MB (beats 88.64%)  
+**Submitted:** 2026-07-29T13:37:15.076Z  
 
 ```java
 class Solution {
