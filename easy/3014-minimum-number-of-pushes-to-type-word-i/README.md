@@ -59,19 +59,18 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-07-31T04:52:53.897Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.3 MB (beats 28.02%)  
+**Submitted:** 2026-07-31T04:54:44.659Z  
 
 ```java
-class Solution {
-    public int minimumPushes(String word) {
-        int q=word.length()>>3;
-    }
-        int r=word.length()&7;
-        return ((q<<2)+r)*(q+1);
+class Solution {
+    public int minimumPushes(String word) {
+        int q=word.length()>>3;
+        int r=word.length()&7;
+        return ((q<<2)+r)*(q+1);
+    }
 }
-
 ```
 
 ---
