@@ -70,19 +70,26 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-07-31T04:58:24.405Z  
+**Runtime:** 20 ms (beats 20.81%)  
+**Memory:** 47.7 MB (beats 94.51%)  
+**Submitted:** 2026-07-31T04:58:33.623Z  
 
 ```java
-            if(f[i] != 0) {
-                ans += (i / 8 + 1) * f[i]; 
-            }
-        }
-        return ans; 
-    }
+class Solution {
+    public int minimumPushes(String word) {
+        Integer[] f = new Integer[26]; 
+        Arrays.fill(f, 0); 
+        for(int i = 0; i < word.length(); i++) f[word.charAt(i) - 'a']++; 
+        Arrays.sort(f, Collections.reverseOrder()); 
+        int ans = 0; 
+        for(int i = 0; i < 26; i++) {
+            if(f[i] != 0) {
+                ans += (i / 8 + 1) * f[i]; 
+            }
+        }
+        return ans; 
+    }
 }
-
 ```
 
 ---
