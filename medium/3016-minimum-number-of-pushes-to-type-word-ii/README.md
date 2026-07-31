@@ -71,8 +71,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-07-31T04:58:17.731Z  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-07-31T04:58:24.405Z  
 
 ```java
             if(f[i] != 0) {
