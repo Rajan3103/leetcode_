@@ -39,30 +39,33 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-01T05:53:55.678Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43 MB (beats 23.56%)  
+**Submitted:** 2026-08-01T05:54:20.398Z  
 
 ```java
-        if(dp[left][right]!=null){
-        }
-            return nums[left];
-            return dp[left][right];
-        }
-        int takeLeft=nums[left]-solve(nums,left+1,right);
-        int takeRight=nums[right]-solve(nums,left,right-1);
+class Solution {
+    Integer [][] dp;
+    public boolean predictTheWinner(int[] nums) {
+        int n=nums.length;
+        dp=new Integer[n][n];
+        return solve(nums,0,n-1)>=0;
+    }
+    private int solve(int[]nums,int left,int right){
+        if(left==right){
+            return nums[left];
+        }
+        if(dp[left][right]!=null){
+            return dp[left][right];
+        }
+        int takeLeft=nums[left]-solve(nums,left+1,right);
+        int takeRight=nums[right]-solve(nums,left,right-1);
 
-        if(left==right){
-    private int solve(int[]nums,int left,int right){
-    }
-        return solve(nums,0,n-1)>=0;
-        dp=new Integer[n][n];
-        int n=nums.length;
-        dp[left][right]=Math.max(takeLeft,takeRight);
+        dp[left][right]=Math.max(takeLeft,takeRight);
 
-        return dp[left][right];
-    }
-
+        return dp[left][right];
+    }
+}
 ```
 
 ---
