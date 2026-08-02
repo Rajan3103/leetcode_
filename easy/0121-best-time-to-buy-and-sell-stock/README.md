@@ -36,28 +36,27 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-02T06:00:53.909Z  
+**Runtime:** 1 ms (beats 99.95%)  
+**Memory:** 94.4 MB (beats 71.64%)  
+**Submitted:** 2026-08-02T06:00:59.717Z  
 
 ```java
-class Solution {
-    public int maxProfit(int[] prices) {
-        int minprice=Integer.MAX_VALUE;
-        int maxprofit=0;
-        for(int price:prices){
-            if(price<minprice){
-                minprice=price;
-            }
-        }
-            int profit=price-minprice;
-            if(profit>maxprofit){
-                maxprofit=profit;
-            }
-    }
-        return maxprofit;
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minprice=Integer.MAX_VALUE;
+        int maxprofit=0;
+        for(int price:prices){
+            if(price<minprice){
+                minprice=price;
+            }
+            int profit=price-minprice;
+            if(profit>maxprofit){
+                maxprofit=profit;
+            }
+        }
+        return maxprofit;
+    }
 }
-
 ```
 
 ---
