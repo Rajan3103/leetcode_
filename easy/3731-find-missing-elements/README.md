@@ -59,9 +59,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-04T16:22:10.742Z  
+**Runtime:** 3 ms (beats 81.76%)  
+**Memory:** 46.8 MB (beats 67.71%)  
+**Submitted:** 2026-08-04T16:22:19.538Z  
 
 ```java
 class Solution {
@@ -69,12 +69,12 @@ class Solution {
         int min=Integer.MAX_VALUE;
         int max=Integer.MIN_VALUE;
 
-        HashSet<Integer>set=new Hashset<>();
+        HashSet<Integer>set=new HashSet<>();
         for(int num:nums){
             min=Math.min(min,num);
             max=Math.max(max,num);
 
-            set.add(add);
+            set.add(num);
         }
         List<Integer>ans=new ArrayList<>();
         for(int i=min+1;i<max;i++){
