@@ -3,12 +3,12 @@ class Solution {
         int min=Integer.MAX_VALUE;
         int max=Integer.MIN_VALUE;
 
-        HashSet<Integer>set=new Hashset<>();
+        HashSet<Integer>set=new HashSet<>();
         for(int num:nums){
             min=Math.min(min,num);
             max=Math.max(max,num);
 
-            set.add(add);
+            set.add(num);
         }
         List<Integer>ans=new ArrayList<>();
         for(int i=min+1;i<max;i++){
