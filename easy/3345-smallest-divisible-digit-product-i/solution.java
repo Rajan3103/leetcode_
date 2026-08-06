@@ -1,16 +1,17 @@
-                product *=temp%10;
-            }
-                temp/=10;
-            if (product%t==0) {
-                return n;
-            }
-            n++;
-        }
-    }
-            while(temp>0){
+class Solution {
+    public int smallestNumber(int n, int t) {
+        while(true){
+            int product=1;
+            int temp=n;
 
-            int temp=n;
-            int product=1;
-        while(true){
-    public int smallestNumber(int n, int t) {
-class Solution {
+            while(temp>0){
+                product *=temp%10;
+                temp/=10;
+            }
+            if (product%t==0) {
+                return n;
+            }
+            n++;
+        }
+    }
+}
