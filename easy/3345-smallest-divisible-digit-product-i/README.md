@@ -41,28 +41,28 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-08-06T13:16:59.926Z  
+**Runtime:** 1 ms (beats 100.00%)  
+**Memory:** 42.7 MB (beats 50.26%)  
+**Submitted:** 2026-08-06T13:17:05.700Z  
 
 ```java
-                product *=temp%10;
-            }
-                temp/=10;
-            if (product%t==0) {
-                return n;
-            }
-            n++;
-        }
-    }
-            while(temp>0){
+class Solution {
+    public int smallestNumber(int n, int t) {
+        while(true){
+            int product=1;
+            int temp=n;
 
-            int temp=n;
-            int product=1;
-        while(true){
-    public int smallestNumber(int n, int t) {
-class Solution {
-
+            while(temp>0){
+                product *=temp%10;
+                temp/=10;
+            }
+            if (product%t==0) {
+                return n;
+            }
+            n++;
+        }
+    }
+}
 ```
 
 ---
