@@ -51,28 +51,36 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-06T07:25:31.583Z  
+**Runtime:** 11 ms (beats 33.29%)  
+**Memory:** 86.9 MB (beats 23.93%)  
+**Submitted:** 2026-08-06T07:25:39.627Z  
 
 ```java
-            dp[i] = Integer.MIN_VALUE;
-            int sum = 0;
+class Solution {
+    public String stoneGameIII(int[] stoneValue) {
 
-            for (int j = i; j < Math.min(n, i + 3); j++) {
+        int n = stoneValue.length;
 
-                sum += stoneValue[j];
+        int[] dp = new int[n + 1];
 
+        for (int i = n - 1; i >= 0; i--) {
 
-        for (int i = n - 1; i >= 0; i--) {
+            dp[i] = Integer.MIN_VALUE;
+            int sum = 0;
 
-        int[] dp = new int[n + 1];
+            for (int j = i; j < Math.min(n, i + 3); j++) {
 
-        int n = stoneValue.length;
+                sum += stoneValue[j];
 
-    public String stoneGameIII(int[] stoneValue) {
-class Solution {
+                dp[i] = Math.max(dp[i], sum - dp[j + 1]);
+            }
+        }
 
+        if (dp[0] > 0) return "Alice";
+        if (dp[0] < 0) return "Bob";
+        return "Tie";
+    }
+}
 ```
 
 ---
