@@ -36,28 +36,29 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-08-07T16:00:50.568Z  
+**Runtime:** 1 ms (beats 99.98%)  
+**Memory:** 42.8 MB (beats 26.86%)  
+**Submitted:** 2026-08-07T16:01:04.208Z  
 
 ```java
-            x/=10;
-            if(r>Integer.MAX_VALUE/10||(r == Integer.MAX_VALUE / 10 && digit > 7)){
-                return 0;
-            }
-            if (r < Integer.MIN_VALUE / 10 ||
-                (r == Integer.MIN_VALUE / 10 && digit < -8)) {
-                return 0;
-            }
-        }
-            r=r*10+digit;
-        return r;
-            int digit=x%10;
-        while(x!=0){
-        int r=0;
-class Solution {
-    public int reverse(int x) {
-
+class Solution {
+    public int reverse(int x) {
+        int r=0;
+        while(x!=0){
+            int digit=x%10;
+            x/=10;
+            if(r>Integer.MAX_VALUE/10||(r == Integer.MAX_VALUE / 10 && digit > 7)){
+                return 0;
+            }
+            if (r < Integer.MIN_VALUE / 10 ||
+                (r == Integer.MIN_VALUE / 10 && digit < -8)) {
+                return 0;
+            }
+            r=r*10+digit;
+        }
+        return r;
+    }
+}
 ```
 
 ---
