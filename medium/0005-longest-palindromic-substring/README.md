@@ -30,23 +30,22 @@ Constraints:
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.2 MB  
-**Submitted:** 2026-09-14T09:59:01.508Z  
+**Runtime:** 8514 ms (beats 5.97%)  
+**Memory:** 19.4 MB (beats 36.06%)  
+**Submitted:** 2026-09-14T09:59:16.615Z  
 
 ```py
-class Solution:
-    def longestPalindrome(self, s: str) -> str:
-        n = len(s)
-        best = ""
-        for i in range(n):
-            for j in range(i, n):
-                sub = s[i:j+1]
-                if sub == sub[::-1]:
-                    if len(sub) > len(best):
-                        best = sub
-        return best
-
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        n = len(s)
+        best = ""
+        for i in range(n):
+            for j in range(i, n):
+                sub = s[i:j+1]
+                if sub == sub[::-1]:
+                    if len(sub) > len(best):
+                        best = sub
+        return best
 ```
 
 ---
